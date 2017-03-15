@@ -78,6 +78,7 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="//desk-customers.s3.amazonaws.com/v10/css/style.css" rel="stylesheet">
 <link href="//desk-customers.s3.amazonaws.com/v10/css/mobile.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -100,6 +101,7 @@
 <style>
     {% if desk.page.theme.logo-img != "" %}
     /* LOGO FUNCTIONALITY */
+  
       #header h1 a {
         display: inline-block;
         min-width: 100%;
@@ -183,7 +185,7 @@
       #content .container.topic .body .qna h3 a,
       #content .container.topic .body .article h3 a{
         {% if desk.page.theme.header-font != "" %}
-          font-family: {{desk.page.theme.header-font}};
+          font-family: 'Source Sans Pro', sans-serif;
         {% endif %}
         color: {{desk.page.theme.default-text-color}};
       }
@@ -200,7 +202,7 @@
       #content .container.index .get-sat ul li a {
         color: {{desk.page.theme.content-text-color}};
         {% if desk.page.theme.default-font != "" %}
-           font-family: {{desk.page.theme.default-font}};
+           font-family: 'Source Sans Pro', sans-serif;
         {% endif %}
       }
     /* BUTTON COLORS */
