@@ -201,6 +201,7 @@
       #content .container.index .desk-qna ul li a,
       #content .container.index .get-sat ul li a {
         color: {{desk.page.theme.content-text-color}};
+        text-decoration: none;
         {% if desk.page.theme.default-font != "" %}
            font-family: 'Source Sans Pro', sans-serif;
         {% endif %}
@@ -310,6 +311,7 @@
       #footer .container a span,
       #mobile-menu .mobile-suggest ul.results li a i {
         color: {{desk.page.theme.hyperlink-color}};
+        text-decoration: none;
       }
     /* PAGINATION */
       .pagination>li>a, .pagination>li>span {
@@ -320,6 +322,7 @@
       .pagination>li>a:focus,
       .pagination>li>span:focus {
         color: {{desk.page.theme.btn-background-color}};
+        text-decoration: none;
       }
       .pagination>.active>a,
       .pagination>.active>span,
@@ -363,6 +366,70 @@
         background: {{desk.page.theme.content-background-color }};
       }
     {% endif %}
+  
     /** Custom CSS **/
     {{ desk.page.theme.custom_css }}
+  
+    .note {
+      color: #333;
+      background: #cce9ff;
+      font-size: 15px;
+      padding: 10px 30px 10px 20px;
+      line-height: 22px;
+      margin-bottom: 18px;
+      position: relative;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cce9ff', endColorstr='#b3deff'); /* for IE */
+      background: -webkit-gradient(linear, left top, left bottom, from(#cce9ff), to(#b3deff)); /* for webkit browsers */
+      background: -moz-linear-gradient(top,  #cce9ff,  #b3deff); /* for firefox 3.6+ */
+      -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18), 0 0 5px 0 rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18), 0 0 5px 0 rgba(0, 0, 0, 0.2);
+      -ie-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18), 0 0 5px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18), 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+    .cta {
+      color: #2a9af9;
+      font-family: "ProximaNovaBold", sans-serif;
+      background-color: #FFF;
+      border: 1px solid #cce9ff;
+      padding: 9px 30px;
+      line-height: 1;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: all 0.5s ease;
+    }
+
+    .cta:hover {
+      background-color: #cce9ff;
+      border-color: #54aeff;
+      box-shadow: 0 1px 3px #CCC;
+      color: #164b78;
+    }
+  
+    .doc-icon {
+      display: inline !important;
+      padding: 0 !important;
+      border: 0 !important;
+      -webkit-border-radius: 0 !important;
+      -moz-border-radius: 0 !important;
+      -webkit-box-shadow: 0 0 0 !important;
+      margin: 0 3px 0 -6px !important;
+      height: auto;
+      width: 40px;
+      opacity: 0.6;
+    }
+    
+    .disqus-link {
+      color: #2e87e7 !important;
+      transition: all 0.5s ease !important;
+    }
+  
+    .disqus-link:hover {
+      color: #164b78 !important;
+      text-decoration: none !important;
+    }
 </style>
