@@ -156,7 +156,6 @@
       #header ul.nav.nav-pills li p,
       #header .langslct,
       #header .langslct > .langslctInner{
-        border-color: {{desk.page.theme.hdr-text-color}};
         color: {{desk.page.theme.hdr-text-color}} ;
       }
     /* HEADER HOVERS */
@@ -199,7 +198,7 @@
       .myportal.index .body table tbody,
       #content .container.index .desk-topic ul li a,
       #content .container.index .desk-qna ul li a,
-      #content .container.index .get-sat ul li a {
+      /*#content .container.index .get-sat ul li a */{
         color: {{desk.page.theme.content-text-color}};
         text-decoration: none;
         {% if desk.page.theme.default-font != "" %}
@@ -469,8 +468,9 @@
    height: 85px; 
    border-collapse: #000; 
    background: #C6E8FF;
+   transition: all 0.5s ease !important;
    margin: 20px auto;
-   padding-top: 5px;
+   padding-top: 2.5px;
   }
   
   .outter-background{
@@ -480,7 +480,7 @@
    height: 80px;
    border-collapse: #000; 
    background: #FFF;
-   margin: 0px auto;
+   margin: 0px;
   }
   
   .module ul.team div h3.title{
@@ -508,3 +508,17 @@
     margin-top: 0px;
   }
   
+  .footer-links ul li{
+    color: #cce9ff !important;
+    font-weight: bold !important;
+    display: inline !important;
+    padding: .2em 1em !important;
+    transition: all 0.5s ease !important;
+  }
+  
+  .footer-links ul li:hover{
+    text-decoration: none !important;
+    color: #cce9ff !important;
+  }
+  
+</style>
