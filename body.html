@@ -25,7 +25,7 @@
       <div id="sidebar" class="col-md-4 {% if desk.page.theme.layout != 'left' %}left col-md-pull-8{% endif %}">
         {% if site.questions_enabled_config or desk.apps.get_satisfaction.enabled or  site.email_enabled_config or site.chat_enabled_config or site.phone_enabled_config %}
           <h2>
-            Helpful Links:
+            Get Support:
           </h2>
           <ul>
 
@@ -116,7 +116,7 @@
               </a>
             </h1>
           {% else %}
-            {{ desk.page.theme.header_content }}
+            Get Support
           {% endif %}
           {% if current_user and current_user.is_guest == false %}
                 <h4 class="welcome">{{system.snippets.welcome}} <a href="{{ desk.system.links.myaccount }}"> {{ current_user.customer.name }}</a></h4>
@@ -354,7 +354,7 @@
                 <div class="row header">
                   <h2 class="subheader col-md-12">
                     {% if topics_count > 0 %}
-                        {{system.snippets.browse_by_topic}}
+                        Popular Articles
                     {% else %}
                         {{system.snippets.no_topics_avail}}
                     {% endif %}
