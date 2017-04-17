@@ -10,44 +10,43 @@
 <link rel="icon" type='image/png' href='{{ "/favicon.png" | portal_image_url: image_asset_host }}' />
 {% endif %}
 <title>
-  {{ site.company_name }} |
   {% case page %}
   {% when 'page_index' %}
-    {{desk.system.snippets.portal_title}}
+    {{desk.system.snippets.portal_title}} · Disqus
   {% when 'page_search_result' %}
-    {{desk.system.snippets.search_results}}
+    {{desk.system.snippets.search_results}} · Disqus
   {% when 'page_topic' %}
-    {{ topic.name | clip:40 }}
+    {{ topic.name | clip:40 }} · Disqus
   {% when 'page_article' %}
-    {{ article.subject_plain | clip:40 }}
+    {{ article.subject_plain | clip:40 }} · Disqus
   {% when 'question_new' or 'question_pre_create' %}
-    {{desk.system.snippets.post_public_question}}
+    {{desk.system.snippets.post_public_question}} · Disqus
   {% when 'question_show' %}
-    {{ question.subject_plain | clip:40 }}
+    {{ question.subject_plain | clip:40 }} · Disqus
   {% when 'email_new' or 'email_pre_create' %}
-    {{desk.system.snippets.email_us}}
+    {{desk.system.snippets.email_us}} · Disqus
   {% when 'email_submitted' %}
-    {{desk.system.snippets.email_sent}}
+    {{desk.system.snippets.email_sent}} · Disqus
   {% when 'chat_new' or 'chat_pre_create' %}
-    {{desk.system.snippets.live_chat}}
+    {{desk.system.snippets.live_chat}} · Disqus
   {% when 'myportal_index' %}
-    {{desk.system.snippets.my_cases}}
+    {{desk.system.snippets.my_cases}} · Disqus
   {% when 'myportal_show' %}
-    {{desk.page.content.case.subject | clip:40 }}
+    {{desk.page.content.case.subject | clip:40 }} · Disqus
   {% when 'login' %}
-    {{desk.system.snippets.login_title}}
+    {{desk.system.snippets.login_title}} · Disqus
   {% when 'registration' %}
-    {{desk.system.snippets.registration_title}}
+    {{desk.system.snippets.registration_title}} · Disqus
   {% when 'forgot_password' %}
-    {{desk.system.snippets.password_reset_title}}
+    {{desk.system.snippets.password_reset_title}} · Disqus
   {% when 'myaccount' %}
-    {{desk.system.snippets.account_title}}
+    {{desk.system.snippets.account_title}} · Disqus
   {% when 'authentication_verification' %}
-    {{desk.system.snippets.auth_verification_title}}
+    {{desk.system.snippets.auth_verification_title}} · Disqus
   {% when 'customer_feedback' %}
-    {{desk.system.snippets.customer_feedback_title}}
+    {{desk.system.snippets.customer_feedback_title}} · Disqus
   {% when 'customer_feedback_completed' %}
-    {{desk.system.snippets.customer_feedback_title}}
+    {{desk.system.snippets.customer_feedback_title}} · Disqus
   {% endcase %}
 </title>
 
@@ -74,10 +73,10 @@
                   **** STYLE SHEETS FONTS AND MORE ****
     /////////////////////////////////////////////////////////////// -->
 
-<link rel="stylesheet" href="//desk-customers.s3.amazonaws.com/v10/css/bootstrap.min.css">
+<link rel="stylesheet" href="//disqus-cloudfront.s3.amazonaws.com/docs/css-2/bootstrap.min.css">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="//desk-customers.s3.amazonaws.com/v10/css/style.css" rel="stylesheet">
-<link href="//desk-customers.s3.amazonaws.com/v10/css/mobile.css" rel="stylesheet">
+<link href="//disqus-cloudfront.s3.amazonaws.com/docs/css-2/style.css" rel="stylesheet">
+<link href="//disqus-cloudfront.s3.amazonaws.com/docs/css-2/mobile.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -526,3 +525,12 @@
   }
   
 </style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-1410476-15', 'auto');
+  ga('send', 'pageview');
+</script>
