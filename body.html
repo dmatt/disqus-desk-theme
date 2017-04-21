@@ -24,9 +24,9 @@
     <!-- BEGIN MAIN SIDEBAR -->
       <div id="sidebar" class="col-md-4 {% if desk.page.theme.layout != 'left' %}left col-md-pull-8{% endif %}">
         {% if site.questions_enabled_config or desk.apps.get_satisfaction.enabled or  site.email_enabled_config or site.chat_enabled_config or site.phone_enabled_config %}
-          <h2>
+          <h4>
             Get Support:
-          </h2>
+          </h4>
           <ul>
 
             <li>
@@ -35,13 +35,6 @@
             <li>
               <a class="article-link" href='https://disqus.com/support/'>Support Hub<i class="fa fa-info-circle"></i></a>
             </li>
-            <li>
-              <a class="article-link" href='https://disqus.com/home/channel/discussdisqus/topics/developer/'>Dev Forum<i class="fa fa-cogs"></i></a>
-            </li>
-
-
-
-
 
           </ul>
         {% endif %}
@@ -131,9 +124,7 @@
             <li>
               <a href='https://disqus.com/support/'>Support Hub<i class="fa fa-info-circle"></i></a>
             </li>
-            <li>
-              <a href='https://disqus.com/home/channel/discussdisqus/topics/developer/'>Dev Forum<i class="fa fa-cogs"></i></a>
-            </li>
+
           {% if site.portal_authentication_enabled_config %}
             {% if current_user and current_user.is_guest == true  and page != "login" %}
               <!-- Guest -->
@@ -190,7 +181,7 @@
     <div id="header">
       <div class="container">
         <div class="row">
-          <div class="{% if widelogo == true %} col-md-12 {% else %} col-md-5 {% endif %}">
+          <div class="{% if widelogo == true %} col-md-12 {% else %} col-md-8 {% endif %}">
               {% if desk.page.theme.header_content == "" %}
               <h1>
                 <a href="{{desk.system.links.home}}">
@@ -205,8 +196,11 @@
                 {{ desk.page.theme.header_content }}
               {% endif %}
           </div>
-          <div class="{% if widelogo == true %} col-md-12 {% else %} col-md-7 {% endif %}">
+          <div class="{% if widelogo == true %} col-md-12 {% else %} col-md-4 {% endif %}">
             <ul class="nav nav-pills">
+              <li>
+                <a href="https://disqus.com/admin/" id="desk-auth-login-link" class="">Admin</a>
+              </li>
               <li>
                 <a href="https://status.disqus.com/" id="desk-auth-login-link" class="">System Status</a>
               </li>
@@ -346,7 +340,7 @@
             {% if IndexLayout == "Topics" %}
               <div class="col-md-12 centered">
             {% else %}
-              <div class="col-md-8 {% if desk.page.theme.layout != 'left' %} col-md-push-4 {% endif %}">
+              <div class="col-md-12 {% if desk.page.theme.layout != 'left' %} col-md-push-4 {% endif %}">
             {% endif %}
                 <div id="desk-external-variables-page_index" class="desk-external-variables">
                   <div id="system-snippets-just_moderated">{{just_moderated}}</div>
@@ -436,7 +430,7 @@
                     {% assign col = 0 %}
                     {%for topic in topics%}
                       {% if topic.article_count > 0 %}
-                          <div class="desk-topic desk-topic-{{ topic.id }} col-md-6">
+                          <div class="desk-topic desk-topic-{{ topic.id }} col-md-4">
                             <h3>
                                <a class="topic-link" href='{{ topic.public_articles_url }}'>{{ topic.name }}</a></h3>
                             <ul>
@@ -451,11 +445,11 @@
                             </a>
                           </div>
 
-                          {% if col == 2 %}
+                          {% if col == 3 %}
                             </div><div class="row topic">
                             {%assign col = 0 %}
                           {%else%}
-                            {% assign col = 2 %}
+                            <!-- {% assign col = 2 %} -->
                           {%endif%}
 
                       {%endif%}
@@ -463,7 +457,7 @@
                      
                   </div>
 <div class="row module" align="center">
-    <h1>Support Team</h1>
+    <h3>Support Team</h3>
     <ul class="team">
         <div class="col-md-4">
             <div class="outter-border">
@@ -677,19 +671,6 @@
                 <div class="row footer">
                   <div class="col-md-6">
                     <p class="updated">{{system.snippets.last_update}} - <time>{{ article.updated_at | in_time_zone: site.timezone | date: '%b %d, %Y %I:%M%p %Z' }}</time></p>
-                  </div>
-                  <div class="col-md-6">
-                    <ul class="social">
-                        <li class="btn-facebook">
-                          <a href="#" data-href="https://developers.facebook.com/docs/plugins/" data-type="button_count" class="btn-facebook fb-share-button" target="pop">Share</a>
-                        </li>
-                        <li>
-                          <a href="https://twitter.com/share" target="pop" class="twitter-share-button">Tweet</a>
-                        </li>
-                        <li>
-                          <a data-size="medium" data-annotation="bubble" data-width="94" class="rndbtn btn-flat btn-gplus g-plusone">Share</a>
-                        </li>
-                    </ul>
                   </div>
                 </div>
               </div>
@@ -2801,16 +2782,16 @@
             </ul>
         </div>
 
-        <div class="row attribution col-md-4">
+        <!-- <div class="row attribution col-md-4">
           <!--
           ***************
           The following attribution needs to remain as is in terms of wording with the appropriate link back to desk.com as per our terms of service: http://www.desk.com/terms
           If you would like, you may change the location or the styling to better match your site, but the content and the link must remain in the template and visible to end users.
           ****************
-          -->
-          <div id="desk-attribution"><a href="http://www.desk.com/">Customer service software <span>powered by Desk.com</span></a></div>
+          
+          <div id="desk-attribution" style="color:red !important;"><a href="http://www.desk.com/">Customer service software <span>powered by Desk.com</span></a></div>
       </div>
-  </div>
+  </div> -->
 </div><!-- #desk-footer -->
 
 {% if just_moderated %}

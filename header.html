@@ -12,7 +12,7 @@
 <title>
   {% case page %}
   {% when 'page_index' %}
-    {{desk.system.snippets.portal_title}} · Disqus
+    Knowledge Base · Disqus
   {% when 'page_search_result' %}
     {{desk.system.snippets.search_results}} · Disqus
   {% when 'page_topic' %}
@@ -315,11 +315,14 @@
     /* PAGINATION */
       .pagination>li>a, .pagination>li>span {
         color: {{desk.page.theme.btn-background-color}};
+        transition: all 0.5s ease;
       }
       .pagination>li>a:hover,
       .pagination>li>span:hover,
       .pagination>li>a:focus,
       .pagination>li>span:focus {
+        transition: all 0.5s ease;
+        background-color: #cce9ff;
         color: {{desk.page.theme.btn-background-color}};
         text-decoration: none;
       }
@@ -331,7 +334,8 @@
       .pagination>.active>span:focus{
         background: {{desk.page.theme.btn-background-color}};
         border-color: {{desk.page.theme.btn-background-color}};
-        color: {{desk.page.theme.btn-text-color}};
+        transition: all 0.5s ease;
+        color: #e4e7ee;
       }
     /* SEARCH BAR -- Uses Old Title Background */
       #search {background: {{desk.page.theme.title-background-color}};}
@@ -497,8 +501,7 @@
   .module {
     background-color: ;
     border-color: ;
-    border-radius: 50px;
-    border: 1px solid #2e87e7;
+    border-top: 1px solid #e4e7ee;
     padding-top: 15px;
     padding-bottom: 15px;
   }
@@ -508,6 +511,7 @@
   }
   
   .footer-links ul li{
+    text-align: center;
     color: #cce9ff !important;
     font-weight: bold !important;
     display: inline !important;
