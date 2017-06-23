@@ -618,7 +618,7 @@
               <div class="col-md-8 {% if desk.page.theme.layout != 'left' %} col-md-push-4 {% endif %}">
                 <div class="header row">
                   <div class="col-md-12">
-                        <h2>{{system.snippets.article_translation_missing}} {{system.language_name_localized}}</h2>
+                        <h2>Oops...we couldn't find what you were looking for :(</h2>
                   </div>
                 </div>
               </div>
@@ -633,9 +633,9 @@
               <div class="col-md-8 {% if desk.page.theme.layout != 'left' %} col-md-push-4 {% endif %}">
                 <div class="header row">
                   <div class="col-md-12">
-                      <h2>
+                      <h1>
                         {{ article.subject_plain }}
-                      </h2>
+                      </h1>
                   </div>
                 </div><!-- Support Head -->
                 <div class="body row">
@@ -868,7 +868,7 @@
                 {% if number_search_results == 0 %}
                   <div class="row noresults">
                     <div class="col-md-12">
-                      <h3>{{system.snippets.sorry_try_another_search}} <a href='{{desk.system.links.email}}'>{{system.snippets.send_us_an_email}}</a></h3>
+                      <h3>{{system.snippets.sorry_try_another_search}} <a href='https://disqus.com/support/'>contact support</a></h3>
                     </div>
                   </div>
                 {% endif %}
@@ -2771,14 +2771,15 @@
 </div> <!-- Wrapper -->
 <div id="footer">
     <div class="container">
-        <div class="row footer-links col-md-8">
+        <div class="row footer-links col-md-10">
             <ul class="list-unstyled">
                 <li><a href="https://disqus.com/features/">Features</a></li>
-                <li><a href="https://disqus.com/how/">How Disqus Works</a></li>
+                <li><a href="https://disqus.com/how/">How Disqus Works</a></li> 
+                <li><a href="https://disqus.com/pricing/">Plans and Pricing</a></li>
                 <li><a href="http://blog.disqus.com/">Blog</a></li>
                 <li><a href="https://disqus.com/api/">API</a></li>
                 <li><a href="https://disqus.com/jobs">Jobs</a></li>
-                <li><a href="https://help.disqus.com/customer/portal/topics/215159-terms-and-policies/articles">Terms and Polcies</a></li>
+                <li><a href="https://help.disqus.com/customer/portal/topics/215159-terms-and-policies/articles">Terms and Policies</a></li>
             </ul>
         </div>
 
