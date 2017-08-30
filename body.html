@@ -53,6 +53,43 @@
     <!-- END MAIN SIDEBAR -->
 {% endcapture %}
 
+{% capture sidebar_main_variant %}
+    <!-- BEGIN MAIN SIDEBAR -->
+      <h2>
+        Get Support
+      </h2>
+      <div id="sidebar" class="col-md-12 {% if desk.page.theme.layout != 'left' %}left col-md-pull-8{% endif %}">
+        {% if site.questions_enabled_config or desk.apps.get_satisfaction.enabled or site.email_enabled_config or site.chat_enabled_config or site.phone_enabled_config %}
+          <div class="col-md-6">
+            <ul>
+              <li>
+                <a class="article-link" href='https://disqus.com/home/channel/discussdisqus/'>Discuss Disqus<i class="fa fa-users"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul>
+              <li>
+                <a class="article-link" href='https://disqus.com/support/'>Support Hub<i class="fa fa-info-circle"></i></a>
+              </li>
+            </ul>
+          </div>
+        {% endif %}
+        {% if desk.apps.get_satisfaction.enabled %}
+          <!-- GS -->
+          <div class='gs-content'>
+            <h2>{{system.snippets.recent_discussions}}</h2>
+            <div id='gs_Sidebar_Results'>
+              <img alt='Ajax-loader-small' id='question_submit_spinner' src='{{ "/images/ajax-loader-small.gif" | portal_image_url: image_asset_host }}' style='display:block;margin:auto;' />
+            </div>
+            {{gs_recent_activity_scripting}}
+          </div>
+          <!-- GS -->
+        {% endif %}
+      </div>
+    <!-- END MAIN SIDEBAR -->
+{% endcapture %}
+
 {% capture sidebar_suggest %}
     <!-- BEGIN AUTO SUGGEST SIDEBAR -->
     <div id="sidebar" class="sidebar suggest col-md-4 {% if desk.page.theme.layout != 'left' %}left col-md-pull-8 {% endif %}">
@@ -337,6 +374,11 @@
         <div id="content">
           <div class="container index">
             <div class="row">
+            <!--SIDEBAR VARIANT -->
+              {% if IndexLayout != "Topics" %}
+                {{ sidebar_main_variant }}
+              {% endif %}
+            <!--SIDEBAR -->            
             {% if IndexLayout == "Topics" %}
               <div class="col-md-12 centered">
             {% else %}
@@ -590,11 +632,7 @@
                 {% endif %}
                 <!-- GET SAT -->
               </div><!--Index Col 8 -->
-              <!--SIDEBAR -->
-                {% if IndexLayout != "Topics" %}
-                  {{ sidebar_main }}
-                {% endif %}
-              <!--SIDEBAR -->
+
             </div><!-- Main Row-->
           </div><!--Container-->
         </div><!--Content-->
