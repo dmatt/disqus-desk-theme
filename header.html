@@ -303,7 +303,6 @@
       .container.pre-create .panel-body ul li h4,
       div.options ul li a,
       #sidebar > ul > li > a,
-      #sidebar > div > ul > li > a,
       .gs-content ul > li > div,
       #sidebar .autosuggest > ul > li > a > span,
       #footer,
@@ -445,14 +444,12 @@
       color: #2e9fff !important;
       text-decoration: none !important;
     }
-     #sidebar > ul > li i,
-     #sidebar > div > ul > li i {
+     #sidebar > ul > li i {
       color: #353a3d;
       transition: all 0.5s ease !important;
   }
   
-    #sidebar > ul > li:hover i,
-    #sidebar > div > ul > li:hover i {
+    #sidebar > ul > li:hover i {
       color: #2e87e7;
       transition: all 0.5s ease !important;
   }
@@ -555,6 +552,35 @@
   span.highlight {
     background: #fff299 !important;
   }
+
+    /* Variant to test higher placement and redesigned support links */
+
+#sidebar-variant div > ul, .gs-content ul {
+    border-radius: 10px;
+    list-style: none;
+    background: rgba( 0, 0, 0, .035);
+    padding: 0px 15px;
+    margin: 30px 0px;
+}
+
+#sidebar-variant div > ul > li, .gs-content ul > li {
+    text-transform: uppercase;
+}
+
+#sidebar-variant div > ul > li a, .gs-content ul > li div {
+    color: #3498db;
+    padding: 20px 0px;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#sidebar-variant div > ul > li a i {
+    float: right;
+    color: #c5c5c5;
+    margin-right: 10px;
+    font-size: 20px;
+}  
   
 </style>
 
