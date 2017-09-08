@@ -24,9 +24,9 @@
     <!-- BEGIN MAIN SIDEBAR -->
       <div id="sidebar" class="col-md-4 {% if desk.page.theme.layout != 'left' %}left col-md-pull-8{% endif %}">
         {% if site.questions_enabled_config or desk.apps.get_satisfaction.enabled or  site.email_enabled_config or site.chat_enabled_config or site.phone_enabled_config %}
-          <h4>
+          <h2 style="padding-left: 15px;">
             Get Support:
-          </h4>
+          </h2>
           <ul>
 
             <li>
@@ -55,7 +55,7 @@
 
 {% capture sidebar_main_variant %}
     <!-- BEGIN MAIN SIDEBAR -->
-      <h2>
+      <h2 style="padding-left: 15px;">
         Get Support
       </h2>
       <div id="sidebar-variant" class="col-md-12 {% if desk.page.theme.layout != 'left' %}left col-md-pull-8{% endif %}">
@@ -146,7 +146,7 @@
               </a>
             </h1>
           {% else %}
-            Get Support
+            Article Topics
           {% endif %}
           {% if current_user and current_user.is_guest == false %}
                 <h4 class="welcome">{{system.snippets.welcome}} <a href="{{ desk.system.links.myaccount }}"> {{ current_user.customer.name }}</a></h4>
@@ -156,10 +156,58 @@
       </div>
       <ul class="nav nav-pills nav-stacked">
             <li>
-              <a href='https://disqus.com/home/channel/discussdisqus/'>Discuss Disqus<i class="fa fa-users"></i></a>
+              <a href='https://help.disqus.com/customer/en/portal/topics/215144-what-is-disqus-/articles'>What is Disqus?</a>
             </li>
             <li>
-              <a href='https://disqus.com/support/'>Support Hub<i class="fa fa-envelope-o"></i></a>
+              <a href='https://help.disqus.com/customer/en/portal/topics/1066040-installation/articles'>Installation</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/1008068-ads/articles'>Ads</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/1066039-troubleshooting/articles'>Troubleshooting</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/1066041-disqus-pro/articles'>Disqus Pro</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/215157-import-export-and-syncing/articles'>Import, Export, and Syncing</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/215154-commenting/articles'>Commenting</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/215155-moderation/articles'>Moderation</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/1066043-user-profile/articles'>User Profile</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/107054-developer/articles'>Developer</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/218124-api/articles'>API</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/215158-analytics/articles'>Analytics</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/628553-advertisers/articles'>Advertisers</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/839842-channel-moderation/articles'>Channel Moderation</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/637329-community-tips/articles'>Community Tips</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/218131-other-integrations/articles'>Other Integrations</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/215159-terms-and-policies/articles'>Terms and Policies</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/350116-known-issues/articles'>Known Issues</a>
             </li>
 
           {% if site.portal_authentication_enabled_config %}
@@ -2748,7 +2796,7 @@
         <div class="row footer-links col-md-10">
             <ul class="list-unstyled">
                 <li><a href="https://disqus.com/features/">Features</a></li>
-                <li><a href="https://disqus.com/how/">How Disqus Works</a></li> 
+                <li><a href="https://disqus.com/how/">How Disqus Works</a></li>
                 <li><a href="https://disqus.com/pricing/">Plans and Pricing</a></li>
                 <li><a href="http://blog.disqus.com/">Blog</a></li>
                 <li><a href="https://disqus.com/api/">API</a></li>
@@ -2861,3 +2909,4 @@
 </div>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="//desk-customers.s3.amazonaws.com/v10/js/desk.portal.js" type="text/javascript"></script>
+  
