@@ -485,7 +485,7 @@
    background: #FFF;
    margin: 0px;
   }
-  
+
   .module ul.team div h3.title{
   margin: 0 0 0 0 !important;
   }
@@ -580,16 +580,23 @@
     color: #c5c5c5;
     margin-right: 10px;
     font-size: 20px;
-}  
+}
   
 </style>
 
 <script>
+  // Get the Disqus user from the disqus.com cookie
+  var disqusAuthId = $.cookie('disqusauth').split('|')[6];
+
+  // Google Analytics
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-1410476-15', 'auto');
+  ga('create', 'UA-1410476-15', 'auto', {
+    // Set the Disqus user
+    userId: disqusAuthId
+  });
   ga('send', 'pageview');
 </script>
 
