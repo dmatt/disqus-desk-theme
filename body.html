@@ -2915,8 +2915,11 @@
 <!-- Start of Segment Embed Code -->
   <script async defer src="https://c.disquscdn.com/next/current/embed/segment.js"></script>
 <!-- End of Segment Embed Code -->
-<!-- Start of Customer.io code -->
+
+{% if page == "page_article" %}
+  <!-- Start of Customer.io code -->
   <script type="text/javascript">
+  var disqusAuthId = $.cookie('disqusauth').split('|')[6];
   var _cio = _cio || [];
 
   (function() {
@@ -2932,4 +2935,17 @@
     s.parentNode.insertBefore(t, s);
   })();
   </script>
+
+  <script type="text/javascript">
+    if (disqusAuthId) {
+      _cio.identify({
+        id: disqusAuthId,
+        last_kb_visit: {
+          title: '{{ article.subject_plain }}',
+          url: '{{ article.public_url }}'
+          }
+      });
+    }
+  </script>
   <!-- End of Customer.io code -->
+{%endif%}
